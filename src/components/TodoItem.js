@@ -3,18 +3,12 @@ import PropTypes from 'prop-types';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class TodoItem extends React.Component {
-  constructor(props) {
-    super(props);
-    this.updateChecked = this.updateChecked.bind(this);
-    this.deleteSelf = this.deleteSelf.bind(this);
-  }
-
-  updateChecked() {
+  updateChecked = () => {
     const { todo, checkHandler } = this.props;
     checkHandler(todo.id);
   }
 
-  deleteSelf() {
+  deleteSelf = () => {
     const { todo, deleteHandler } = this.props;
     deleteHandler(todo.id);
   }
