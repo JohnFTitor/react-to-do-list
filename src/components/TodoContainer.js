@@ -2,7 +2,6 @@ import React from 'react';
 import Header from './Header';
 import TodosList from './TodosList';
 
-// eslint-disable-next-line react/prefer-stateless-function
 class TodoContainer extends React.Component {
   constructor(props) {
     super(props);
@@ -25,6 +24,21 @@ class TodoContainer extends React.Component {
         },
       ],
     };
+    this.updateCompleted = this.updateCompleted.bind(this);
+  }
+
+  updateCompleted(id) {
+    this.setState((previousState) => (
+      {
+        todos: previousState.todos.map((todo) => {
+          let { completed } = todo;
+          if (todo.id === id) {
+            completed = !todo.completed;
+          }
+          return { ...todo, completed };
+        }),
+      }
+    ));
   }
 
   render() {
@@ -32,7 +46,7 @@ class TodoContainer extends React.Component {
     return (
       <div>
         <Header />
-        <TodosList todos={todos} />
+        <TodosList todos={todos} checkHandler={this.updateCompleted} />
       </div>
     );
   }
