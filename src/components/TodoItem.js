@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 // Styles
 import styles from './TodoItem.module.css';
 
-// eslint-disable-next-line react/prefer-stateless-function
 class TodoItem extends React.Component {
   updateChecked = () => {
     const { todo, checkHandler } = this.props;
