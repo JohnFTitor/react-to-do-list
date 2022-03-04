@@ -51,7 +51,7 @@ Linter Checks are automatically run with Github actions when there's a pull requ
 
 - GitHub: [@JohnFTitor](https://github.com/JohnFTitor)
 - Twitter: [@johnftitor](https://twitter.com/johnftitor)
-- LinkedIn: [Andres](https://www.linkedin.com/in/andresfelipe117/?locale=en_US)
+- LinkedIn: [Andres](https://www.linkedin.com/in/andresarroyavenaranjo/?locale=en_US)
 
 ## Acknowledgments
 
